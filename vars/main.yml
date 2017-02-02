@@ -1,0 +1,8 @@
+---
+
+taskd_home: /var/lib/taskd
+taskd_pki_dir: /usr/share/doc/taskd/pki
+taskd_port: 53589
+taskd_org: bar
+taskd_user: foo
+taskd_cn: taskd.example.org
