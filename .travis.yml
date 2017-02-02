@@ -14,6 +14,7 @@ arch:
     - ansible-lint tasks/main.yml
     - echo localhost > inventory
     - ansible-playbook -i inventory --syntax-check --list-tasks test/test.yml -e "role_name=ansible-role-taskd" -e "hosts_group=hosts_group"
+    - ansible-playbook -i inventory --connection=local --sudo -vvvv test/test.yml -u root -e "role_name=ansible-role-taskd" -e "hosts_group=hosts_group"
 
 script: 'curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash'
 
