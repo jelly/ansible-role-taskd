@@ -41,12 +41,14 @@
 
 - name: Add taskd group
   command: taskd add org {{ taskd_org }} creates={{ taskd_home }}/orgs/{{ taskd_org }}
+  become: true
   become_user: taskd
   environment:
           TASKDDATA: /var/lib/taskd
 
 - name: Add taskd user
   command: taskd  add user {{ taskd_org }} {{ taskd_user }} creates={{ taskd_home }}/orgs/{{ taskd_org }}/users/{{ taskd_user }}
+  become: true
   become_user: taskd
   environment:
           TASKDDATA: /var/lib/taskd
