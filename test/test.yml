@@ -1,0 +1,4 @@
+---
+- hosts: "{{hosts_group|default('all')}}"
+  roles:
+    - "{{role_name|default('taskd')}}"
