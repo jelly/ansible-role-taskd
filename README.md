@@ -1,6 +1,6 @@
 # taskd
 
-This role installs and configures taskd server.
+This role installs and configures taskd server on [Arch Linux](https://archlinux.org)
 
 ## Requirements
 
