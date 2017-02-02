@@ -9,6 +9,7 @@ arch:
   packages:
     - ansible
     - ansible-lint
+    - python
 
   script:
     - ansible-lint tasks/main.yml
